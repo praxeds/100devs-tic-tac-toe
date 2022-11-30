@@ -1,1 +1,1 @@
-# 100devs-tic-tac-tow
+# 100devs-tic-tac-toe
