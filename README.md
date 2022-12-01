@@ -66,4 +66,3 @@ Game Play (Computer vs Human)
 Questions / Suggestions
 - how interactive do we want this to be? text based? Or graphics?!
 - let's focus on human vs human first and if we have time left over let's consider human vs machine?
-- 
