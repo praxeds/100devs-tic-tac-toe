@@ -1,0 +1,65 @@
+@import url(../assets/fonts/Neothic/Neothic.css);
+@import url(../assets/fonts/Roboto/Roboto.css);
+.lightBackground {
+  background-color: #fff;
+}
+
+.lightText {
+  color: #fff;
+}
+
+.darkBackground {
+  background-color: #000;
+}
+
+.darkText {
+  color: #000;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.neothic {
+  font-family: "Neothic", serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7vmin 7vmin;
+}
+nav div#backBtn ion-icon {
+  font-size: 10vmin;
+  text-align: center;
+}
+nav div#darkModeToggle {
+  width: 15vmin;
+  height: 7vmin;
+  border-radius: 100vmin;
+  border: 3px solid;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+#startGameSection div#title {
+  width: 85vmin;
+  height: 85vmin;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  margin: auto;
+}
+#startGameSection div#title span {
+  font-size: 25vmin;
+  text-align: center;
+}/*# sourceMappingURL=stylesheet.css.map */

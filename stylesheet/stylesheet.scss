@@ -1,0 +1,95 @@
+@import url(../assets/fonts/Neothic/Neothic.css);
+@import url(../assets/fonts/Roboto/Roboto.css);
+
+$light: #fff;
+$dark: #000;
+
+//!Dark mode x Light mode styles
+// Light mode styles
+.lightBackground {
+    background-color: $light;
+}
+
+.lightText {
+    color: $light;
+}
+
+// Dark mode styles
+.darkBackground {
+    background-color: $dark;
+}
+
+.darkText {
+    color: $dark;
+}
+
+.noDisplay {
+    display: none;
+}
+
+//!Typography styles
+.neothic {
+    font-family: 'Neothic', serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+//!Mixins
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin text($size, $align: start) {
+    font-size: $size;
+    text-align: $align;
+}
+@mixin grid($columns, $rows) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+
+// Path: index.html
+//!Nav
+nav {
+    @include flex(row, space-between, center);
+    padding: 7vmin 7vmin;
+
+    div#backBtn{
+        ion-icon {
+            @include text(10vmin, center);
+        }
+    }
+    div#darkModeToggle {
+        @include size(15vmin,7vmin);
+        border-radius: 100vmin;
+        border: 3px solid;
+    }
+}
+
+main {
+    @include size(100vw, 100vh);
+}
+
+#startGameSection {
+   div#title {
+    @include size(85vmin, 85vmin);
+    @include grid(repeat(3, auto), repeat(3, auto));
+    margin: auto;
+
+    span {
+        @include text(25vmin, center);
+    }
+   }
+}
