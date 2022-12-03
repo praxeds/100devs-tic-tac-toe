@@ -22,7 +22,7 @@
     grid-template-rows: $rows;
 }
 
-@mixin aboslutePositioning($top: 50%, $left: 50%, $right: auto, $bottom: auto, $translateX: -50%, $translateY: -50%) {
+@mixin absolutePositioning($top: 50%, $left: 50%, $right: auto, $bottom: auto, $translateX: -50%, $translateY: -50%) {
     position: absolute;
     top: $top;
     left: $left;

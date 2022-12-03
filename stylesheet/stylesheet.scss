@@ -55,7 +55,7 @@ $darkHover: #04005e;
 
 //!Misc
 .noDisplay {
-    display: none;
+    display: none !important;
 }
 
 .transparent {
@@ -103,12 +103,12 @@ nav {
         
         div#toggleCircle {
             @include size(6.8vmin, 6.8vmin);
-            @include aboslutePositioning($translateX: -100%);
+            @include absolutePositioning($translateX: -100%);
             border-radius: 100vmin;
             
             ion-icon {
                 @include text(5vmin);
-                @include aboslutePositioning();
+                @include absolutePositioning();
             }
         }
     }
@@ -120,7 +120,6 @@ nav {
 }
 
 #startGameSection {
-
     div#title {
         @include size(85vmin, 85vmin);
         @include grid(repeat(3, auto), repeat(3, auto));
@@ -170,6 +169,24 @@ nav {
         .roboto {
             @include text(4vmin);
             font-weight: 300;
+        }
+        .playerContainer {
+            position: relative;
+            ion-icon {
+                position: absolute;
+                @include text(6vmin);
+                animation: whoseTurnAnimation 0.4s infinite alternate ease;
+            }
+
+            @keyframes whoseTurnAnimation {
+                0% {
+                    transform: translateY(-280%);
+                }
+                100% {
+                    transform: translateY(-300%);
+                }
+                
+            }
         }
     }
     div#gameboard {

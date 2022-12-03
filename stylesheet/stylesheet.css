@@ -41,7 +41,7 @@
 }
 
 .noDisplay {
-  display: none;
+  display: none !important;
 }
 
 .transparent {
@@ -181,6 +181,32 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
   font-size: 4vmin;
   text-align: start;
   font-weight: 300;
+}
+#gameplaySection #scoreboardContainer .playerContainer {
+  position: relative;
+}
+#gameplaySection #scoreboardContainer .playerContainer ion-icon {
+  position: absolute;
+  font-size: 6vmin;
+  text-align: start;
+  -webkit-animation: whoseTurnAnimation 0.4s infinite alternate ease;
+          animation: whoseTurnAnimation 0.4s infinite alternate ease;
+}
+@-webkit-keyframes whoseTurnAnimation {
+  0% {
+    transform: translateY(-280%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+@keyframes whoseTurnAnimation {
+  0% {
+    transform: translateY(-280%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
 }
 #gameplaySection div#gameboard {
   width: 85vmin;
