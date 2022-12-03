@@ -1,0 +1,201 @@
+//!This is a mobile first stylesheet
+
+@import url(../assets/fonts/Neothic/Neothic.css);
+@import url(../assets/fonts/Roboto/Roboto.css);
+@import "mixins";
+
+$light: #fff;
+$lightHover: #440bd4;
+$dark: #000;
+$darkHover: #04005e;
+
+//!Dark mode x Light mode styles
+// Light mode styles
+.lightBackground {
+    background-color: $light;
+}
+
+.lightBackground.pointer:hover {
+    background-color: $lightHover;
+}
+
+.lightText {
+    color: $light;
+}
+
+.lightBorder {
+    border-color: $light;
+}
+
+// Dark mode styles
+.darkBackground {
+    background-color: $dark;
+}
+
+.darkBackground.pointer:hover {
+    background-color: $darkHover;
+}
+
+.darkText {
+    color: $dark;
+}
+
+.darkBorder {
+    border-color: $dark;
+}
+
+//!Typography styles
+.neothic {
+    font-family: 'Neothic', serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+//!Misc
+.noDisplay {
+    display: none !important;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+
+
+
+// Path: index.html
+* {
+    box-sizing: border-box;
+}
+body {
+    @include size(100vw, 100vh);
+    @include flex(column, space-around, center);
+    padding: 8vmin;
+
+    main {
+        @include size(100%, 100%);
+        @include flex(column, center, center);
+    }
+}
+
+//!Nav
+nav {
+    @include flex(row, space-between, center);
+    align-self: stretch;
+    div#backBtn {
+        ion-icon {
+            @include text(10vmin, center);
+        }
+    }
+    
+    div#darkModeToggle {
+        @include size(14vmin, 7vmin);
+        border-radius: 100vmin;
+        border: 3px solid;
+        position: relative;
+        
+        div#toggleCircle {
+            @include size(6.8vmin, 6.8vmin);
+            @include absolutePositioning($translateX: -100%);
+            border-radius: 100vmin;
+            
+            ion-icon {
+                @include text(5vmin);
+                @include absolutePositioning();
+            }
+        }
+    }
+}
+
+//!Start Section
+#startGameSection>* {
+    margin: 10vmin auto !important;
+}
+
+#startGameSection {
+    div#title {
+        @include size(85vmin, 85vmin);
+        @include grid(repeat(3, auto), repeat(3, auto));
+
+        span {
+            @include text(25vmin, center);
+        }
+    }
+
+    button.startBtn {
+        @include resetButton();
+        @include size(70vmin, 12vmin);
+        margin: 1rem auto;
+        font-weight: 300;
+        @include flex(row, center, center);
+        gap: 2rem;
+
+        ion-icon {
+            @include text(7vmin);
+        }
+    }
+}
+
+
+
+//!Gameplay Section
+#gameplaySection {
+    @include flex(column, center, center);
+    gap: 5rem;
+
+    #scoreboardContainer {
+        @include flex(row, center, center);
+        gap: 6vmin;
+        >div {
+            @include flex(column, center, center);
+            >* {
+                margin: 0;
+            }
+        }
+        #versusContainer {
+            //This centers the 'versus' text in the middle of the two h2 elements intead of their div containers
+            margin-bottom: 1.8rem;
+        }
+        .neothic {
+            @include text(20vmin);
+        }
+        .roboto {
+            @include text(4vmin);
+            font-weight: 300;
+        }
+        .playerContainer {
+            position: relative;
+            ion-icon {
+                position: absolute;
+                @include text(6vmin);
+                animation: whoseTurnAnimation 0.4s infinite alternate ease;
+            }
+
+            @keyframes whoseTurnAnimation {
+                0% {
+                    transform: translateY(-280%);
+                }
+                100% {
+                    transform: translateY(-300%);
+                }
+                
+            }
+        }
+    }
+    div#gameboard {
+        @include size(85vmin, 85vmin);
+        @include grid(repeat(3, auto), repeat(3, auto));
+        grid-gap: 0.4rem;
+    }
+}
+
+
+//!Media queries for responsive design
+@import "mediaqueries";

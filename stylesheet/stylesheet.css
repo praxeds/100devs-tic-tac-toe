@@ -1,0 +1,287 @@
+@import url(../assets/fonts/Neothic/Neothic.css);
+@import url(../assets/fonts/Roboto/Roboto.css);
+.lightBackground {
+  background-color: #fff;
+}
+
+.lightBackground.pointer:hover {
+  background-color: #440bd4;
+}
+
+.lightText {
+  color: #fff;
+}
+
+.lightBorder {
+  border-color: #fff;
+}
+
+.darkBackground {
+  background-color: #000;
+}
+
+.darkBackground.pointer:hover {
+  background-color: #04005e;
+}
+
+.darkText {
+  color: #000;
+}
+
+.darkBorder {
+  border-color: #000;
+}
+
+.neothic {
+  font-family: "Neothic", serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.noDisplay {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8vmin;
+}
+body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+nav div#backBtn ion-icon {
+  font-size: 10vmin;
+  text-align: center;
+}
+nav div#darkModeToggle {
+  width: 14vmin;
+  height: 7vmin;
+  border-radius: 100vmin;
+  border: 3px solid;
+  position: relative;
+}
+nav div#darkModeToggle div#toggleCircle {
+  width: 6.8vmin;
+  height: 6.8vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-100%, -50%);
+  border-radius: 100vmin;
+}
+nav div#darkModeToggle div#toggleCircle ion-icon {
+  font-size: 5vmin;
+  text-align: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+#startGameSection > * {
+  margin: 10vmin auto !important;
+}
+
+#startGameSection div#title {
+  width: 85vmin;
+  height: 85vmin;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+}
+#startGameSection div#title span {
+  font-size: 25vmin;
+  text-align: center;
+}
+#startGameSection button.startBtn {
+  border: none;
+  outline: none;
+  width: 70vmin;
+  height: 12vmin;
+  margin: 1rem auto;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#startGameSection button.startBtn ion-icon {
+  font-size: 7vmin;
+  text-align: start;
+}
+
+#gameplaySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+#gameplaySection #scoreboardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6vmin;
+}
+#gameplaySection #scoreboardContainer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gameplaySection #scoreboardContainer > div > * {
+  margin: 0;
+}
+#gameplaySection #scoreboardContainer #versusContainer {
+  margin-bottom: 1.8rem;
+}
+#gameplaySection #scoreboardContainer .neothic {
+  font-size: 20vmin;
+  text-align: start;
+}
+#gameplaySection #scoreboardContainer .roboto {
+  font-size: 4vmin;
+  text-align: start;
+  font-weight: 300;
+}
+#gameplaySection #scoreboardContainer .playerContainer {
+  position: relative;
+}
+#gameplaySection #scoreboardContainer .playerContainer ion-icon {
+  position: absolute;
+  font-size: 6vmin;
+  text-align: start;
+  -webkit-animation: whoseTurnAnimation 0.4s infinite alternate ease;
+          animation: whoseTurnAnimation 0.4s infinite alternate ease;
+}
+@-webkit-keyframes whoseTurnAnimation {
+  0% {
+    transform: translateY(-280%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+@keyframes whoseTurnAnimation {
+  0% {
+    transform: translateY(-280%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+#gameplaySection div#gameboard {
+  width: 85vmin;
+  height: 85vmin;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 0.4rem;
+}
+
+@media (min-width: 768px) {
+  #startGameSection > * {
+    margin: 7vmin auto !important;
+  }
+  #startGameSection div#title {
+    width: 66vmin;
+    height: 65vmin;
+  }
+  #startGameSection div#title span {
+    font-size: 15vmin;
+    text-align: center;
+  }
+  #startGameSection button.startBtn {
+    border: none;
+    outline: none;
+    width: 55vmin;
+    height: 12vmin;
+    margin: 1rem auto;
+    gap: 2rem;
+  }
+}
+@media (min-width: 1199.98px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  nav div#backBtn ion-icon {
+    font-size: 7.5vmin;
+    text-align: center;
+  }
+  nav div#darkModeToggle {
+    width: 10vmin;
+    height: 5vmin;
+  }
+  nav div#darkModeToggle div#toggleCircle {
+    width: 4.8vmin;
+    height: 4.8vmin;
+  }
+  nav div#darkModeToggle div#toggleCircle ion-icon {
+    font-size: 3.5vmin;
+    text-align: start;
+  }
+  #startGameSection > * {
+    margin: 3vmin auto !important;
+  }
+  #startGameSection div#title {
+    width: 45vmin;
+    height: 45vmin;
+  }
+  #startGameSection div#title span {
+    font-size: 13vmin;
+    text-align: center;
+  }
+  #startGameSection button.startBtn {
+    border: none;
+    outline: none;
+    width: 38vmin;
+    height: 9vmin;
+    margin: 2rem auto;
+  }
+  #startGameSection button.startBtn ion-icon {
+    font-size: 5vmin;
+    text-align: start;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */
