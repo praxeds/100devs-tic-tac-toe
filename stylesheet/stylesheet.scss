@@ -2,7 +2,9 @@
 @import url(../assets/fonts/Roboto/Roboto.css);
 
 $light: #fff;
+$lightHover: #440bd4;
 $dark: #000;
+$darkHover: #04005e;
 
 //!Dark mode x Light mode styles
 // Light mode styles
@@ -10,8 +12,16 @@ $dark: #000;
     background-color: $light;
 }
 
+.lightBackground.pointer:hover {
+    background-color: $lightHover;
+}
+
 .lightText {
     color: $light;
+}
+
+.lightBorder {
+    border-color: $light;
 }
 
 // Dark mode styles
@@ -19,12 +29,16 @@ $dark: #000;
     background-color: $dark;
 }
 
+.darkBackground.pointer:hover {
+    background-color: $darkHover;
+}
+
 .darkText {
     color: $dark;
 }
 
-.noDisplay {
-    display: none;
+.darkBorder {
+    border-color: $dark;
 }
 
 //!Typography styles
@@ -35,6 +49,22 @@ $dark: #000;
 .roboto {
     font-family: 'Roboto', sans-serif;
 }
+
+//!Misc
+.noDisplay {
+    display: none;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+
 
 //!Mixins
 @mixin flex($direction, $justify, $align) {
@@ -53,12 +83,30 @@ $dark: #000;
     font-size: $size;
     text-align: $align;
 }
+
 @mixin grid($columns, $rows) {
     display: grid;
     grid-template-columns: $columns;
     grid-template-rows: $rows;
 }
 
+@mixin aboslutePositioning($top: 50%, $left: 50%, $right: auto, $bottom: auto, $translateX: -50%, $translateY: -50%) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    transform: translate($translateX, $translateY);
+}
+
+@mixin transition($property, $duration, $timing) {
+    transition: $property $duration $timing;
+}
+
+@mixin resetButton {
+    border: none;
+    outline: none;
+}
 
 // Path: index.html
 //!Nav
@@ -66,30 +114,52 @@ nav {
     @include flex(row, space-between, center);
     padding: 7vmin 7vmin;
 
-    div#backBtn{
+    div#backBtn {
         ion-icon {
             @include text(10vmin, center);
         }
     }
+
     div#darkModeToggle {
-        @include size(15vmin,7vmin);
+        @include size(14vmin, 7vmin);
         border-radius: 100vmin;
         border: 3px solid;
-    }
-}
+        position: relative;
 
-main {
-    @include size(100vw, 100vh);
+        div#toggleCircle {
+            @include size(8vmin, 8vmin);
+            @include aboslutePositioning($translateX: -100%);
+            border-radius: 100vmin;
+
+            ion-icon {
+                @include text(5vmin);
+                @include aboslutePositioning();
+            }
+        }
+    }
 }
 
 #startGameSection {
-   div#title {
-    @include size(85vmin, 85vmin);
-    @include grid(repeat(3, auto), repeat(3, auto));
-    margin: auto;
+    div#title {
+        @include size(85vmin, 85vmin);
+        @include grid(repeat(3, auto), repeat(3, auto));
+        margin: 8vmin auto 15vmin;
 
-    span {
-        @include text(25vmin, center);
+        span {
+            @include text(25vmin, center);
+        }
     }
-   }
+
+    button.startBtn {
+        @include resetButton();
+        @include size(85vmin, 12vmin);
+        margin: 5vmin auto;
+        font-weight: 300;
+        @include flex(row, center, center);
+        gap: 2rem;
+
+        ion-icon {
+            @include text(7vmin);
+        }
+    }
 }

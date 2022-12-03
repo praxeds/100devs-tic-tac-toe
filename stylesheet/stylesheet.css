@@ -4,20 +4,32 @@
   background-color: #fff;
 }
 
+.lightBackground.pointer:hover {
+  background-color: #440bd4;
+}
+
 .lightText {
   color: #fff;
+}
+
+.lightBorder {
+  border-color: #fff;
 }
 
 .darkBackground {
   background-color: #000;
 }
 
+.darkBackground.pointer:hover {
+  background-color: #04005e;
+}
+
 .darkText {
   color: #000;
 }
 
-.noDisplay {
-  display: none;
+.darkBorder {
+  border-color: #000;
 }
 
 .neothic {
@@ -26,6 +38,18 @@
 
 .roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 nav {
@@ -40,15 +64,32 @@ nav div#backBtn ion-icon {
   text-align: center;
 }
 nav div#darkModeToggle {
-  width: 15vmin;
+  width: 14vmin;
   height: 7vmin;
   border-radius: 100vmin;
   border: 3px solid;
+  position: relative;
 }
-
-main {
-  width: 100vw;
-  height: 100vh;
+nav div#darkModeToggle div#toggleCircle {
+  width: 8vmin;
+  height: 8vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-100%, -50%);
+  border-radius: 100vmin;
+}
+nav div#darkModeToggle div#toggleCircle ion-icon {
+  font-size: 5vmin;
+  text-align: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
 }
 
 #startGameSection div#title {
@@ -57,9 +98,26 @@ main {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
-  margin: auto;
+  margin: 8vmin auto 15vmin;
 }
 #startGameSection div#title span {
   font-size: 25vmin;
   text-align: center;
+}
+#startGameSection button.startBtn {
+  border: none;
+  outline: none;
+  width: 85vmin;
+  height: 12vmin;
+  margin: 5vmin auto;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#startGameSection button.startBtn ion-icon {
+  font-size: 7vmin;
+  text-align: start;
 }/*# sourceMappingURL=stylesheet.css.map */
