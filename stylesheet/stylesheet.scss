@@ -1,5 +1,8 @@
+//!This is a mobile first stylesheet
+
 @import url(../assets/fonts/Neothic/Neothic.css);
 @import url(../assets/fonts/Roboto/Roboto.css);
+@import "mixins";
 
 $light: #fff;
 $lightHover: #440bd4;
@@ -66,53 +69,12 @@ $darkHover: #04005e;
 
 
 
-//!Mixins
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin size($width, $height) {
-    width: $width;
-    height: $height;
-}
-
-@mixin text($size, $align: start) {
-    font-size: $size;
-    text-align: $align;
-}
-
-@mixin grid($columns, $rows) {
-    display: grid;
-    grid-template-columns: $columns;
-    grid-template-rows: $rows;
-}
-
-@mixin aboslutePositioning($top: 50%, $left: 50%, $right: auto, $bottom: auto, $translateX: -50%, $translateY: -50%) {
-    position: absolute;
-    top: $top;
-    left: $left;
-    right: $right;
-    bottom: $bottom;
-    transform: translate($translateX, $translateY);
-}
-
-@mixin transition($property, $duration, $timing) {
-    transition: $property $duration $timing;
-}
-
-@mixin resetButton {
-    border: none;
-    outline: none;
-}
 
 // Path: index.html
 //!Nav
 nav {
     @include flex(row, space-between, center);
-    padding: 7vmin 7vmin;
+    padding: 7vmin 7vmin 0;
 
     div#backBtn {
         ion-icon {
@@ -127,7 +89,7 @@ nav {
         position: relative;
 
         div#toggleCircle {
-            @include size(8vmin, 8vmin);
+            @include size(7.2vmin, 7.2vmin);
             @include aboslutePositioning($translateX: -100%);
             border-radius: 100vmin;
 
@@ -139,11 +101,17 @@ nav {
     }
 }
 
+
+//!Start Section
+#startGameSection>* {
+    margin: 10vmin auto !important;
+}
+
 #startGameSection {
+
     div#title {
         @include size(85vmin, 85vmin);
         @include grid(repeat(3, auto), repeat(3, auto));
-        margin: 8vmin auto 15vmin;
 
         span {
             @include text(25vmin, center);
@@ -152,8 +120,8 @@ nav {
 
     button.startBtn {
         @include resetButton();
-        @include size(85vmin, 12vmin);
-        margin: 5vmin auto;
+        @include size(70vmin, 12vmin);
+        margin: 1rem auto;
         font-weight: 300;
         @include flex(row, center, center);
         gap: 2rem;
@@ -163,3 +131,5 @@ nav {
         }
     }
 }
+
+@import "mediaqueries";

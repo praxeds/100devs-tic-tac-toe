@@ -1,0 +1,79 @@
+@import "mixins";
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    //!Start Section
+    #startGameSection>* {
+        margin: 7vmin auto !important;
+    }
+
+    #startGameSection {
+        div#title {
+            @include size(66vmin, 65vmin);
+
+            span {
+                @include text(15vmin, center);
+            }
+        }
+
+        button.startBtn {
+            @include resetButton();
+            @include size(55vmin, 12vmin);
+            margin: 1rem auto;
+            gap: 2rem;
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 1199.98px) {
+
+    //!Nav
+    nav {
+        @include flex(row, space-between, center);
+        padding: 6vmin 15vmin 0;
+
+        div#backBtn {
+            ion-icon {
+                @include text(7.5vmin, center);
+            }
+        }
+
+        div#darkModeToggle {
+            @include size(10vmin, 5vmin);
+
+            div#toggleCircle {
+                @include size(5.4vmin, 5.4vmin);
+
+                ion-icon {
+                    @include text(3.5vmin);
+                }
+            }
+        }
+    }
+
+    //!Start Section
+    #startGameSection>* {
+        margin: 3vmin auto !important;
+    }
+
+    #startGameSection {
+
+        div#title {
+            @include size(45vmin, 45vmin);
+            span {
+                @include text(13vmin, center);
+            }
+        }
+
+        button.startBtn {
+            @include resetButton();
+            @include size(38vmin, 9vmin);
+            margin: 2rem auto;
+            ion-icon {
+                @include text(5vmin);
+            }
+        }
+    }
+}
