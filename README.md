@@ -1,6 +1,6 @@
 # 100devs-tic-tac-toe
 
-## File Structure
+## File & Folder Structure
 
 |-README.md
 |-index.html
