@@ -52,12 +52,26 @@
   cursor: pointer;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8vmin;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 7vmin 7vmin 0;
+  align-self: stretch;
 }
 nav div#backBtn ion-icon {
   font-size: 10vmin;
@@ -71,8 +85,8 @@ nav div#darkModeToggle {
   position: relative;
 }
 nav div#darkModeToggle div#toggleCircle {
-  width: 7.2vmin;
-  height: 7.2vmin;
+  width: 6.8vmin;
+  height: 6.8vmin;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -125,6 +139,23 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
   text-align: start;
 }
 
+#gameplaySection #scoreboardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6vmin;
+}
+#gameplaySection #scoreboardContainer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gameplaySection #scoreboardContainer > div > * {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   #startGameSection > * {
     margin: 7vmin auto !important;
@@ -152,7 +183,7 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 6vmin 15vmin 0;
+    align-self: stretch;
   }
   nav div#backBtn ion-icon {
     font-size: 7.5vmin;
@@ -163,8 +194,8 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
     height: 5vmin;
   }
   nav div#darkModeToggle div#toggleCircle {
-    width: 5.4vmin;
-    height: 5.4vmin;
+    width: 4.8vmin;
+    height: 4.8vmin;
   }
   nav div#darkModeToggle div#toggleCircle ion-icon {
     font-size: 3.5vmin;

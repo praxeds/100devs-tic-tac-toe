@@ -32,7 +32,7 @@
     //!Nav
     nav {
         @include flex(row, space-between, center);
-        padding: 6vmin 15vmin 0;
+        align-self: stretch;
 
         div#backBtn {
             ion-icon {
@@ -44,7 +44,7 @@
             @include size(10vmin, 5vmin);
 
             div#toggleCircle {
-                @include size(5.4vmin, 5.4vmin);
+                @include size(4.8vmin, 4.8vmin);
 
                 ion-icon {
                     @include text(3.5vmin);

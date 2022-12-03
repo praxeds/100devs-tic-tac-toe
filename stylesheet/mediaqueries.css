@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 6vmin 15vmin 0;
+    align-self: stretch;
   }
   nav div#backBtn ion-icon {
     font-size: 7.5vmin;
@@ -36,8 +36,8 @@
     height: 5vmin;
   }
   nav div#darkModeToggle div#toggleCircle {
-    width: 5.4vmin;
-    height: 5.4vmin;
+    width: 4.8vmin;
+    height: 4.8vmin;
   }
   nav div#darkModeToggle div#toggleCircle ion-icon {
     font-size: 3.5vmin;

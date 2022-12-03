@@ -71,28 +71,38 @@ $darkHover: #04005e;
 
 
 // Path: index.html
+* {
+    box-sizing: border-box;
+}
+body {
+    @include size(100vw, 100vh);
+    @include flex(column, space-around, center);
+    padding: 8vmin;
+}
+
 //!Nav
 nav {
     @include flex(row, space-between, center);
-    padding: 7vmin 7vmin 0;
+    align-self: stretch;
 
+    
     div#backBtn {
         ion-icon {
             @include text(10vmin, center);
         }
     }
-
+    
     div#darkModeToggle {
         @include size(14vmin, 7vmin);
         border-radius: 100vmin;
         border: 3px solid;
         position: relative;
-
+        
         div#toggleCircle {
-            @include size(7.2vmin, 7.2vmin);
+            @include size(6.8vmin, 6.8vmin);
             @include aboslutePositioning($translateX: -100%);
             border-radius: 100vmin;
-
+            
             ion-icon {
                 @include text(5vmin);
                 @include aboslutePositioning();
@@ -100,7 +110,6 @@ nav {
         }
     }
 }
-
 
 //!Start Section
 #startGameSection>* {
@@ -132,4 +141,22 @@ nav {
     }
 }
 
+
+
+//!Gameplay Section
+#gameplaySection {
+    #scoreboardContainer {
+        @include flex(row, center, center);
+        gap: 6vmin;
+        >div {
+            @include flex(column, center, center);
+            >* {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+//!Media queries for responsive design
 @import "mediaqueries";

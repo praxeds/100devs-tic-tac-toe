@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
 </head>
 
-<body>
+<body class="lightBackground">
     <nav>
         <div id="backBtn" class="darkText transparent pointer">
             <ion-icon name="arrow-back-circle"></ion-icon>
@@ -22,9 +22,9 @@
         </div>
     </nav>
 
-    <!--Section that user sees as soon as loading the page-->
-    <main class="lightBackground">
-        <section id="startGameSection">
+    <main>
+        <!--Section that user sees as soon as loading the page-->
+        <section id="startGameSection" class="">
             <div id="title">
                 <span class="darkText neothic">T</span>
                 <span class="darkText neothic">I</span>
@@ -47,6 +47,26 @@
                     <p class="roboto lightText">VS</p>
                     <ion-icon name="person-outline" class="lightText"></ion-icon>
                 </button>
+            </div>
+        </section>
+
+        <!--Game section showing the board and whose turn is it.
+            Once user clicks on either button from #startGameSection (.startBtn),
+            we would use javascript to toggle the class .noDisplay to make #startGameSection disappear
+            and make this section show up!-->
+        <section id="gameplaySection" class="noDisplay">
+            <div id="scoreboardContainer" class="darkText">
+                <div id="playerOneContainer">
+                    <h2 class="neothic">X</h2>
+                    <p class="roboto">Player 1</p>
+                </div>
+                <div id="versusContainer" class="roboto">
+                    <p>VS</p>
+                </div>
+                <div id="playerTwoContainer">
+                    <h2 class="neothic">O</h2>
+                    <p class="roboto">Player 2</p>
+                </div>
             </div>
         </section>
     </main>
