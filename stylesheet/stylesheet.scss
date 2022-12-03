@@ -78,14 +78,17 @@ body {
     @include size(100vw, 100vh);
     @include flex(column, space-around, center);
     padding: 8vmin;
+
+    main {
+        @include size(100%, 100%);
+        @include flex(column, center, center);
+    }
 }
 
 //!Nav
 nav {
     @include flex(row, space-between, center);
     align-self: stretch;
-
-    
     div#backBtn {
         ion-icon {
             @include text(10vmin, center);
@@ -145,6 +148,9 @@ nav {
 
 //!Gameplay Section
 #gameplaySection {
+    @include flex(column, center, center);
+    gap: 5rem;
+
     #scoreboardContainer {
         @include flex(row, center, center);
         gap: 6vmin;
@@ -154,6 +160,22 @@ nav {
                 margin: 0;
             }
         }
+        #versusContainer {
+            //This centers the 'versus' text in the middle of the two h2 elements intead of their div containers
+            margin-bottom: 1.8rem;
+        }
+        .neothic {
+            @include text(20vmin);
+        }
+        .roboto {
+            @include text(4vmin);
+            font-weight: 300;
+        }
+    }
+    div#gameboard {
+        @include size(85vmin, 85vmin);
+        @include grid(repeat(3, auto), repeat(3, auto));
+        grid-gap: 0.4rem;
     }
 }
 

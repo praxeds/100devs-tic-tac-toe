@@ -24,7 +24,7 @@
 
     <main>
         <!--Section that user sees as soon as loading the page-->
-        <section id="startGameSection" class="">
+        <section id="startGameSection" class="noDisplay">
             <div id="title">
                 <span class="darkText neothic">T</span>
                 <span class="darkText neothic">I</span>
@@ -54,7 +54,7 @@
             Once user clicks on either button from #startGameSection (.startBtn),
             we would use javascript to toggle the class .noDisplay to make #startGameSection disappear
             and make this section show up!-->
-        <section id="gameplaySection" class="noDisplay">
+        <section id="gameplaySection" class="">
             <div id="scoreboardContainer" class="darkText">
                 <div id="playerOneContainer">
                     <h2 class="neothic">X</h2>
@@ -67,6 +67,17 @@
                     <h2 class="neothic">O</h2>
                     <p class="roboto">Player 2</p>
                 </div>
+            </div>
+            <div id="gameboard" class="darkText darkBackground">
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
+                    <div class="gameboardCell lightBackground"></div>
             </div>
         </section>
     </main>

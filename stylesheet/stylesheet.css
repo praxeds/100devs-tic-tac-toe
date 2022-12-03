@@ -65,6 +65,14 @@ body {
   align-items: center;
   padding: 8vmin;
 }
+body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 nav {
   display: flex;
@@ -139,6 +147,13 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
   text-align: start;
 }
 
+#gameplaySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
 #gameplaySection #scoreboardContainer {
   display: flex;
   flex-direction: row;
@@ -154,6 +169,26 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
 }
 #gameplaySection #scoreboardContainer > div > * {
   margin: 0;
+}
+#gameplaySection #scoreboardContainer #versusContainer {
+  margin-bottom: 1.8rem;
+}
+#gameplaySection #scoreboardContainer .neothic {
+  font-size: 20vmin;
+  text-align: start;
+}
+#gameplaySection #scoreboardContainer .roboto {
+  font-size: 4vmin;
+  text-align: start;
+  font-weight: 300;
+}
+#gameplaySection div#gameboard {
+  width: 85vmin;
+  height: 85vmin;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 0.4rem;
 }
 
 @media (min-width: 768px) {
