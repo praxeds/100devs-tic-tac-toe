@@ -54,11 +54,20 @@
 ```
 #### playerToken.js
 ```
-[X] Will keep track of the token owner (not 100% sure)
+*** I believe that frankRose gave each player 5 tokens coz those are the 
+    max moves a single player can ever make on the board **
+[X] Will keep track of the token position
+[X] Will render the token 'X' or 'O' on the gameboard
 ```
 #### player.js
 ```
-[X] 
+[X] Will keep track of the players moves
+[X] Will create the player tokens
+[X] Will keep track of the player tokens
+    ->Will keep track of which tokens haven't been played
+    ->Will select the next token for the player to use
+[X] Will create a computer player
+    ->Will make random computer moves on empty cells/squares
 ```
 
 #### gameLogic.js
