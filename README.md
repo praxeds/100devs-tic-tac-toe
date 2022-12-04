@@ -37,6 +37,17 @@
 [X] Will control mouse hover actions
 
 ```
+#### gameBoard.js
+```
+[X] The gameboard is made up of 9 indidivual cells/squares
+[X] No need to render the board since index.html handles the structure
+    ->target each individual cell/square on the gameboard
+
+```
+#### boardCell.js
+```
+[X] 
+```
 
 #### File & Folder Structure   
 ```
