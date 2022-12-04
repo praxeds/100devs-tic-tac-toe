@@ -67,7 +67,7 @@
     ->Will keep track of which tokens haven't been played
     ->Will select the next token for the player to use
 [X] Will create a computer player
-    ->Will make random computer moves on empty cells/squares
+    ->Will make random computer moves depending on available empty cells/squares
 ```
 
 #### gameLogic.js
