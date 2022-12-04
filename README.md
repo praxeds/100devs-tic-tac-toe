@@ -5,8 +5,8 @@
 
 #### index.html    
 ```
-[x] Will handle the structure of the gameboard
-[x] Will have 4 sections based on the mockups by Ana:
+[X] Will handle the structure of the gameboard
+[X] Will have 4 sections based on the mockups by Ana:
     ->1st stage gameboard
       -triggered on page load 
       -intro gameboard 
@@ -25,12 +25,16 @@
       -gameboard is full of X and O at this point
       -displays notification window with the winner or draw
       -notification window also has a 'play again' & 'back to menu'
-[x] Will have a night/day mode button   
+[X] Will have a night/day mode button   
 ```
 
 #### main.js
 ```
-
+[X] Will connect objects to the DOM (majority of the event listeners etc)
+[X] Will initiate game instances depending on player opponent choice
+[X] Will handle swithcing between different gameboard states
+[X] Will control dark/light mode
+[X] Will control mouse hover actions
 
 ```
 
