@@ -1,10 +1,10 @@
-# 100devs-tic-tac-toe   
+# 100devs tic-tac-toe Group Project  
 
 
-### Roadmap
+### Roadmap    
+
+#### index.html    
 ```
-[x][x] index.html
-
 $ Will handle the structure of the gameboard
 $ Will have 4 sections based on the mockups by Ana:
   ->1st stage gameboard
@@ -26,18 +26,15 @@ $ Will have 4 sections based on the mockups by Ana:
       -displays notification window with the winner or draw
       -notification window also has a 'play again' & 'back to menu'
 $ Will have a night/day mode button   
+```
 
-[x][x] stylesheet folder
+#### main.js
+```
 
-$ Will hold all css files and therefore handle all the styling :D
-
-[x][x] main.js
-
-$ 
 
 ```
 
-## File & Folder Structure   
+#### File & Folder Structure   
 ```
 |-README.md  
 |-index.html  
