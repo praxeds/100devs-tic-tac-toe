@@ -63,13 +63,23 @@
 
 #### gameLogic.js
 ```
-[X] 
+[X] Will initialize the game once the player clicks start
+[X] Will create the players once the player(s) enter their name(s)
+[X] Will monitor game play state
+    ->Will determine whose turn it is; player or computer
+    ->Will keep track of players turns.
+    ->Will switch players after each play/click.
+    ->Will actively check for a 'draw' or a 'win' and update game state
+    ->Will display game results in the DOM. 'draw' or 'win'
+[X] Will handle various board game-play effects
+    ->Will toggle player token during hover depending on game state
+    ->Will update and mark gameboard cells
 ```
 
 ### File & Folder Structure   
 ```
-|-README.md  
-|-index.html  
+|--README.md  
+|--index.html  
 |----assets  
     |-fonts  
     |-mockups  
