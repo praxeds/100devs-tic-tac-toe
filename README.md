@@ -46,24 +46,28 @@
 ```
 #### boardCell.js
 ```
-[X] 
+[X] Will connect the DOM to individual cells
+[X] Each cell will hold a reference to a token
+[X] Will check to see if a player "owns" a cell and returns the "owner"
+    ->will return null if no token is associated otherwise return "owner"
+    ->will mark a cell as occupied
 ```
 
 #### File & Folder Structure   
 ```
 |-README.md  
 |-index.html  
-  |-assets  
+|----assets  
     |-fonts  
     |-mockups  
-  |-js  
-    |-board.js   
-    |-game.js   
+|----js  
+    |-boardCell.js   
+    |-gameBoard.js   
+    |-gameLogic.js   
     |-main.js   
     |-player.js   
-    |-space.js   
-    |-token.js   
-  |-stylesheet   
+    |-playerToken.js   
+|----stylesheet   
     |-mediaqueries.css   
     |-mediaqueries.scss   
     |-mixins.css   
