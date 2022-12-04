@@ -52,8 +52,21 @@
     ->will return null if no token is associated otherwise return "owner"
     ->will mark a cell as occupied
 ```
+#### playerToken.js
+```
+[X] Will keep track of the token owner (not 100% sure)
+```
+#### player.js
+```
+[X] 
+```
 
-#### File & Folder Structure   
+#### gameLogic.js
+```
+[X] 
+```
+
+### File & Folder Structure   
 ```
 |-README.md  
 |-index.html  
