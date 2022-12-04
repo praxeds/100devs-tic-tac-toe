@@ -1,5 +1,9 @@
 # 100devs-tic-tac-toe
 
+## Features / To Do
+
+
+
 ## File & Folder Structure
 
 |-README.md
@@ -22,3 +26,10 @@
     |-normalize.css
     |-stylesheet.css
     |-stylesheet.scss
+
+
+## Contributors
+
+Juliana Praxedes
+Taeho wheels63
+Alan Mukuriah
