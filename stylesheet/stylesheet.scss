@@ -13,6 +13,7 @@ $darkHover: #04005e;
 // Light mode styles
 .lightBackground {
     background-color: $light;
+    @include transition(background-color,0.4s,ease);
 }
 
 .lightBackground.pointer:hover {
@@ -21,15 +22,18 @@ $darkHover: #04005e;
 
 .lightText {
     color: $light;
+    @include transition(color,0.4s,ease);
 }
 
 .lightBorder {
-    border-color: $light;
-}
+    border-color: $light !important;
+    @include transition(border-color,0.4s,ease);
+} 
 
 // Dark mode styles
 .darkBackground {
     background-color: $dark;
+    @include transition(background-color,0.4s,ease);
 }
 
 .darkBackground.pointer:hover {
@@ -38,10 +42,23 @@ $darkHover: #04005e;
 
 .darkText {
     color: $dark;
+    @include transition(color,0.4s,ease);
 }
 
+//this disables the annoying highlighting when clicking on a button in mobile
+.noHighlights {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
 .darkBorder {
-    border-color: $dark;
+    border-color: $dark !important;
+    @include transition(border-color,0.4s,ease);
 }
 
 //!Typography styles
@@ -74,6 +91,12 @@ $darkHover: #04005e;
 * {
     box-sizing: border-box;
 }
+
+*::selection {
+    background-color: $lightHover;
+    color: $light;
+}
+
 body {
     @include size(100vw, 100vh);
     @include flex(column, space-around, center);
@@ -89,27 +112,34 @@ body {
 nav {
     @include flex(row, space-between, center);
     align-self: stretch;
+
     div#backBtn {
         ion-icon {
             @include text(10vmin, center);
         }
     }
-    
+
     div#darkModeToggle {
         @include size(14vmin, 7vmin);
         border-radius: 100vmin;
         border: 3px solid;
         position: relative;
-        
+
         div#toggleCircle {
-            @include size(6.8vmin, 6.8vmin);
-            @include absolutePositioning($translateX: -100%);
+            @include size(6.4vmin, 6.4vmin);
             border-radius: 100vmin;
-            
+            @include transition(all,0.4s,ease);
+
             ion-icon {
                 @include text(5vmin);
                 @include absolutePositioning();
             }
+        }
+        div#toggleCircle.lightMode {
+            @include absolutePositioning($translateX: -105%);
+        }
+        div#toggleCircle.darkMode {
+            @include absolutePositioning($translateX: 5%);
         }
     }
 }
@@ -153,25 +183,32 @@ nav {
     #scoreboardContainer {
         @include flex(row, center, center);
         gap: 6vmin;
+
         >div {
             @include flex(column, center, center);
+
             >* {
                 margin: 0;
             }
         }
+
         #versusContainer {
             //This centers the 'versus' text in the middle of the two h2 elements intead of their div containers
             margin-bottom: 1.8rem;
         }
+
         .neothic {
             @include text(20vmin);
         }
+
         .roboto {
             @include text(4vmin);
             font-weight: 300;
         }
+
         .playerContainer {
             position: relative;
+
             ion-icon {
                 position: absolute;
                 @include text(6vmin);
@@ -182,13 +219,15 @@ nav {
                 0% {
                     transform: translateY(-280%);
                 }
+
                 100% {
                     transform: translateY(-300%);
                 }
-                
+
             }
         }
     }
+
     div#gameboard {
         @include size(85vmin, 85vmin);
         @include grid(repeat(3, auto), repeat(3, auto));
