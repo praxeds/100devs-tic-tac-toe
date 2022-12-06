@@ -1,0 +1,26 @@
+{
+  "name": "100devs-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Simple implementation of the grade school classic game \"Tic Tac Toe\"",
+  "main": "index.html",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praxeds/100devs-tic-tac-toe.git"
+  },
+  "keywords": [
+    "100devs",
+    "tictactoe"
+  ],
+  "author": "Alan Mukuriah, Juliana Praxedes, Lee Taeho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praxeds/100devs-tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/praxeds/100devs-tic-tac-toe#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

@@ -2,6 +2,7 @@
 @import url(../assets/fonts/Roboto/Roboto.css);
 .lightBackground {
   background-color: #fff;
+  transition: background-color 0.4s ease;
 }
 
 .lightBackground.pointer:hover {
@@ -10,14 +11,17 @@
 
 .lightText {
   color: #fff;
+  transition: color 0.4s ease;
 }
 
 .lightBorder {
-  border-color: #fff;
+  border-color: #fff !important;
+  transition: border-color 0.4s ease;
 }
 
 .darkBackground {
   background-color: #000;
+  transition: background-color 0.4s ease;
 }
 
 .darkBackground.pointer:hover {
@@ -26,10 +30,21 @@
 
 .darkText {
   color: #000;
+  transition: color 0.4s ease;
+}
+
+.noHighlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .darkBorder {
-  border-color: #000;
+  border-color: #000 !important;
+  transition: border-color 0.4s ease;
 }
 
 .neothic {
@@ -54,6 +69,16 @@
 
 * {
   box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: #440bd4;
+  color: #fff;
+}
+
+*::selection {
+  background-color: #440bd4;
+  color: #fff;
 }
 
 body {
@@ -93,15 +118,10 @@ nav div#darkModeToggle {
   position: relative;
 }
 nav div#darkModeToggle div#toggleCircle {
-  width: 6.8vmin;
-  height: 6.8vmin;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  transform: translate(-100%, -50%);
+  width: 6.4vmin;
+  height: 6.4vmin;
   border-radius: 100vmin;
+  transition: all 0.4s ease;
 }
 nav div#darkModeToggle div#toggleCircle ion-icon {
   font-size: 5vmin;
@@ -112,6 +132,22 @@ nav div#darkModeToggle div#toggleCircle ion-icon {
   right: auto;
   bottom: auto;
   transform: translate(-50%, -50%);
+}
+nav div#darkModeToggle div#toggleCircle.lightMode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-105%, -50%);
+}
+nav div#darkModeToggle div#toggleCircle.darkMode {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(5%, -50%);
 }
 
 #startGameSection > * {

@@ -1,5 +1,12 @@
 # 100devs tic-tac-toe Group Project  
+## Getting Started
 
+First, run the lite-server to start the development server:
+
+```bash
+npm run dev
+```
+The page auto-updates as you edit the file.
 
 ### Roadmap    
 
@@ -89,6 +96,7 @@
 ```
 |--README.md  
 |--index.html  
+|--package.json  
 |----assets  
     |-fonts  
     |-mockups  
