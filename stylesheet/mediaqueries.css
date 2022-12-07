@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+  div.popup button {
+    font-size: 4vmin;
+  }
   #startGameSection > * {
     margin: 7vmin auto !important;
   }
@@ -17,6 +20,22 @@
     height: 12vmin;
     margin: 1rem auto;
     gap: 2rem;
+  }
+  #gameplaySection {
+    gap: 3rem;
+  }
+  #gameplaySection #scoreboardContainer .neothic {
+    font-size: 15vmin;
+    text-align: start;
+  }
+  #gameplaySection #scoreboardContainer .roboto {
+    font-size: 3vmin;
+    text-align: start;
+    font-weight: 300;
+  }
+  #gameplaySection div#gameboard {
+    width: 78vmin;
+    height: 78vmin;
   }
 }
 @media (min-width: 1199.98px) {
@@ -64,5 +83,36 @@
   #startGameSection button.startBtn ion-icon {
     font-size: 5vmin;
     text-align: start;
+  }
+  #gameplaySection {
+    gap: 3rem;
+  }
+  #gameplaySection #scoreboardContainer .neothic {
+    font-size: 10vmin;
+    text-align: start;
+  }
+  #gameplaySection #scoreboardContainer .roboto {
+    font-size: 2vmin;
+    text-align: start;
+  }
+  @-webkit-keyframes whoseTurnAnimation {
+    0% {
+      transform: translateY(-180%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
+  }
+  @keyframes whoseTurnAnimation {
+    0% {
+      transform: translateY(-180%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
+  }
+  #gameplaySection div#gameboard {
+    width: 65vmin;
+    height: 65vmin;
   }
 }/*# sourceMappingURL=mediaqueries.css.map */

@@ -13,7 +13,7 @@ $darkHover: #04005e;
 // Light mode styles
 .lightBackground {
     background-color: $light;
-    @include transition(background-color,0.4s,ease);
+    @include transition(background-color, 0.4s, ease);
 }
 
 .lightBackground.pointer:hover {
@@ -22,18 +22,18 @@ $darkHover: #04005e;
 
 .lightText {
     color: $light;
-    @include transition(color,0.4s,ease);
+    @include transition(color, 0.4s, ease);
 }
 
 .lightBorder {
     border-color: $light !important;
-    @include transition(border-color,0.4s,ease);
-} 
+    @include transition(border-color, 0.4s, ease);
+}
 
 // Dark mode styles
 .darkBackground {
     background-color: $dark;
-    @include transition(background-color,0.4s,ease);
+    @include transition(background-color, 0.4s, ease);
 }
 
 .darkBackground.pointer:hover {
@@ -42,7 +42,7 @@ $darkHover: #04005e;
 
 .darkText {
     color: $dark;
-    @include transition(color,0.4s,ease);
+    @include transition(color, 0.4s, ease);
 }
 
 //this disables the annoying highlighting when clicking on a button in mobile
@@ -54,11 +54,11 @@ $darkHover: #04005e;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
 .darkBorder {
     border-color: $dark !important;
-    @include transition(border-color,0.4s,ease);
+    @include transition(border-color, 0.4s, ease);
 }
 
 //!Typography styles
@@ -128,18 +128,129 @@ nav {
         div#toggleCircle {
             @include size(6.4vmin, 6.4vmin);
             border-radius: 100vmin;
-            @include transition(all,0.4s,ease);
+            @include transition(all, 0.4s, ease);
 
             ion-icon {
                 @include text(5vmin);
                 @include absolutePositioning();
             }
         }
+
         div#toggleCircle.lightMode {
             @include absolutePositioning($translateX: -105%);
         }
+
         div#toggleCircle.darkMode {
             @include absolutePositioning($translateX: 5%);
+        }
+    }
+}
+
+
+
+
+
+//!Popup messages
+div.popup {
+    .popupContainer {
+        @include size(70vmin, 55vmin);
+        @include absolutePositioning();
+        z-index: 10;
+        border: 4px solid;
+        @include flex(column, center, center);
+        gap: 5vmin;
+
+        h2 {
+            margin: 0;
+        }
+
+        button {
+            @include resetButton();
+        }
+    }
+
+    .popupShadow {
+        @include size(70vmin, 55vmin);
+        @include absolutePositioning($translateX: -45%, $translateY: -43%);
+        z-index: 5;
+    }
+}
+
+div#humanVsHumanPopupMessage {
+    div.popupContainer {
+        gap: 7vmin;
+
+        div.playerNameContainer {
+            @include flex(row, center, center);
+            @include size(30vmin, 15vmin);
+            @include text(5vmin, center);
+            gap: 2vmin;
+
+            h2 {
+                @include text(6vmin, center);
+            }
+
+            .playerNameInput {
+                @include flex(column, center, center);
+                gap: 2vmin;
+
+                input {
+                    @include size(26.4vmin, 5vmin);
+                    @include text(3vmin);
+                    text-align: center;
+                    border: 1px solid;
+                }
+            }
+        }
+        button {
+            @include size(55vmin, 15vmin);
+        }
+    }
+}
+
+div#humanVsComputerPopupMessage {
+    div.playerNameContainer {
+        @include flex(row, center, center);
+        @include size(55vmin, 15vmin);
+        @include text(5vmin, center);
+        gap: 2vmin;
+
+        h2 {
+            @include text(6vmin, center);
+        }
+
+        .playerNameInput {
+            @include flex(column, center, center);
+            gap: 4vmin;
+
+            input {
+                @include size(55vmin, 5vmin);
+                @include text(3vmin);
+                text-align: center;
+                border: 1px solid;
+            }
+        }
+    }
+    button {
+        @include size(55vmin, 15vmin);
+    }
+}
+
+div#gameoverPopupMessage {
+    div.popupContainer {
+        h2 {
+            @include text(10vmin, center);
+        }
+
+        div.popupButtons {
+            @include flex(row, center, center);
+            gap: 3vmin;
+
+            button {
+                @include size(30vmin, 15vmin);
+                @include flex(row, center, center);
+                gap: 2rem;
+            }
         }
     }
 }
