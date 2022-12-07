@@ -58,6 +58,8 @@ darkModeToggleBtn.addEventListener('click', () => {
 
 const vsComputerButton = document.querySelector('#vs-computer');
 const vsFriendButton = document.querySelector('#vs-friend');
+const startButton = document.querySelector('#start-button');
+const playerNames = document.querySelector('.player-names')
 
 vsComputerButton.addEventListener('click', () => {
   hideVsButtons()
@@ -89,3 +91,9 @@ function hideVsButtons(){
   vsFriendButton.style.display = 'none';
 }
 
+/**
+ * Displays the player name input fields and the start game button
+ */
+function showStartActions(){
+
+}
