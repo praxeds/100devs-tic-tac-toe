@@ -94,6 +94,7 @@ function hideVsButtons(){
 /**
  * Displays the player name input fields and the start game button
  */
-function showStartActions(){
-
+ function showStartActions(){
+  playerNames.style.display = 'block';
+  startButton.style.display = 'inline-block';
 }
