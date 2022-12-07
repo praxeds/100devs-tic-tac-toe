@@ -56,8 +56,25 @@ darkModeToggleBtn.addEventListener('click', () => {
  * Connecting to the DOM
  */
 
-const vsComputerButton = document.querySelector('#vs-compute');
+const vsComputerButton = document.querySelector('#vs-computer');
 const vsFriendButton = document.querySelector('#vs-friend');
+
+vsComputerButton.addEventListener('click', () => {
+  hideVsButtons()
+  document.querySelector('#player-2-name').style.display = 'none'
+  document.querySelector('label[for="player-2-name"]').style.display = 'none'
+  showStartActions()
+  vsComputer = true
+})
+
+vsFriendButton.addEventListener('click', () => {
+  hideVsButtons()
+  showStartActions()
+  vsComputer = false
+})
+
+
+
 
 //! Functions /////////////////////////////////////////////////////
 const toggleClass = (element, className) => {
