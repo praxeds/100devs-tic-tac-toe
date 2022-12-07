@@ -50,6 +50,14 @@ darkModeToggleBtn.addEventListener('click', () => {
     toggleClass(moonIcon, 'noDisplay')
 })
 
+
+/**
+ * 
+ * Connecting to the DOM
+ */
+
+
+
 //! Functions /////////////////////////////////////////////////////
 const toggleClass = (element, className) => {
     element.classList.toggle(className)
