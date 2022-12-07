@@ -56,7 +56,8 @@ darkModeToggleBtn.addEventListener('click', () => {
  * Connecting to the DOM
  */
 
-
+const vsComputerButton = document.querySelector('#vs-compute');
+const vsFriendButton = document.querySelector('#vs-friend');
 
 //! Functions /////////////////////////////////////////////////////
 const toggleClass = (element, className) => {
