@@ -190,6 +190,10 @@ div.popup .popupContainer div.popupButtons button {
   align-items: center;
   gap: 2rem;
 }
+div.popup .popupContainer div.popupButtons button.largeButton {
+  width: 55vmin;
+  height: 15vmin;
+}
 div.popup .popupShadow {
   width: 70vmin;
   height: 55vmin;
@@ -200,6 +204,39 @@ div.popup .popupShadow {
   bottom: auto;
   transform: translate(-45%, -43%);
   z-index: 5;
+}
+
+div#humanVsHumanPopupMessage div.popupContainer {
+  gap: 7vmin;
+}
+div#humanVsHumanPopupMessage div.playerNameContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30vmin;
+  height: 15vmin;
+  font-size: 5vmin;
+  text-align: center;
+  gap: 2vmin;
+}
+div#humanVsHumanPopupMessage div.playerNameContainer h3 {
+  margin: 0;
+}
+div#humanVsHumanPopupMessage div.playerNameContainer .playerNameInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vmin;
+}
+div#humanVsHumanPopupMessage div.playerNameContainer .playerNameInput input {
+  width: 26.4vmin;
+  height: 5vmin;
+  font-size: 3vmin;
+  text-align: start;
+  text-align: center;
+  border: 1px solid;
 }
 
 #startGameSection > * {

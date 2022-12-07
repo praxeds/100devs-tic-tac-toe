@@ -23,6 +23,26 @@
         </div>
     </nav>
 
+    <div id="humanVsHumanPopupMessage" class="popup" >
+        <div class="popupContainer lightBackground darkBorder roboto">
+            <div class="darkText playerNameContainer">
+                <div class="playerNameInput">
+                    <h3>Player 1 name</h3>
+                    <input type="text" placeholder="Player 1">
+                </div>
+                <div class="playerNameInput">
+                    <h3>Player 2 name</h3>
+                    <input type="text" placeholder="Player 2">
+                </div>
+            </div>
+            <div class="popupButtons">
+                <button class="darkBackground pointer lightText largeButton">Start Game</button>
+            </div>
+        </div>
+        <div class="popupShadow darkBackground">
+        </div>
+    </div>
+
     <div id="gameoverPopupMessage" class="popup noDisplay" >
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText">
@@ -40,7 +60,7 @@
 
     <main>
         <!--Section that user sees as soon as loading the page-->
-        <section id="startGameSection" class="noDisplay">
+        <section id="startGameSection" class="">
             <div id="title">
                 <span class="darkText neothic">T</span>
                 <span class="darkText neothic">I</span>
@@ -70,7 +90,7 @@
             Once user clicks on either button from #startGameSection (.startBtn),
             we would use javascript to toggle the class .noDisplay to make #startGameSection disappear
             and make this section show up!-->
-        <section id="gameplaySection" class="">
+        <section id="gameplaySection" class="noDisplay">
             <div id="scoreboardContainer" class="darkText">
                 <div id="playerOneContainer" class="playerContainer">
                     <ion-icon name="arrow-down"></ion-icon>

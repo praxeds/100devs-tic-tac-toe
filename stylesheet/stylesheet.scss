@@ -173,6 +173,10 @@ div.popup {
                 @include flex(row, center, center);
                 gap: 2rem;
             }
+
+            button.largeButton {
+                @include size(55vmin, 15vmin);
+            }
         }
     }
     .popupShadow {
@@ -182,8 +186,32 @@ div.popup {
     }
 }
 
+div#humanVsHumanPopupMessage {   
+    div.popupContainer {
+        gap:7vmin;
+    } 
+    div.playerNameContainer {
+        @include flex(row, center, center);
+        @include size(30vmin, 15vmin);
+        @include text(5vmin, center);
+        gap: 2vmin;
 
+        h3 {
+            margin: 0;
+        }
+        .playerNameInput {
+            @include flex(column, center, center);
+            gap: 2vmin;
 
+            input {
+                @include size(26.4vmin, 5vmin);
+                @include text(3vmin);
+                text-align: center;
+                border: 1px solid;
+            }
+        }
+    }
+}
 
 //!Start Section
 #startGameSection>* {
