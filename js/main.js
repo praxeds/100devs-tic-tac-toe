@@ -80,3 +80,12 @@ vsFriendButton.addEventListener('click', () => {
 const toggleClass = (element, className) => {
     element.classList.toggle(className)
 }
+
+/**
+ * Hides the "Play vs Computer" and "Play vs Friend" Buttons
+ */
+function hideVsButtons(){
+  vsComputerButton.style.display = 'none';
+  vsFriendButton.style.display = 'none';
+}
+
