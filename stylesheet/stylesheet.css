@@ -168,31 +168,11 @@ div.popup .popupContainer {
   gap: 5vmin;
 }
 div.popup .popupContainer h2 {
-  font-size: 10vmin;
-  text-align: center;
   margin: 0;
 }
-div.popup .popupContainer div.popupButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3vmin;
-}
-div.popup .popupContainer div.popupButtons button {
+div.popup .popupContainer button {
   border: none;
   outline: none;
-  width: 30vmin;
-  height: 15vmin;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-div.popup .popupContainer div.popupButtons button.largeButton {
-  width: 55vmin;
-  height: 15vmin;
 }
 div.popup .popupShadow {
   width: 70vmin;
@@ -209,7 +189,7 @@ div.popup .popupShadow {
 div#humanVsHumanPopupMessage div.popupContainer {
   gap: 7vmin;
 }
-div#humanVsHumanPopupMessage div.playerNameContainer {
+div#humanVsHumanPopupMessage div.popupContainer div.playerNameContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -220,23 +200,84 @@ div#humanVsHumanPopupMessage div.playerNameContainer {
   text-align: center;
   gap: 2vmin;
 }
-div#humanVsHumanPopupMessage div.playerNameContainer h3 {
-  margin: 0;
+div#humanVsHumanPopupMessage div.popupContainer div.playerNameContainer h2 {
+  font-size: 6vmin;
+  text-align: center;
 }
-div#humanVsHumanPopupMessage div.playerNameContainer .playerNameInput {
+div#humanVsHumanPopupMessage div.popupContainer div.playerNameContainer .playerNameInput {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2vmin;
 }
-div#humanVsHumanPopupMessage div.playerNameContainer .playerNameInput input {
+div#humanVsHumanPopupMessage div.popupContainer div.playerNameContainer .playerNameInput input {
   width: 26.4vmin;
   height: 5vmin;
   font-size: 3vmin;
   text-align: start;
   text-align: center;
   border: 1px solid;
+}
+div#humanVsHumanPopupMessage div.popupContainer button {
+  width: 55vmin;
+  height: 15vmin;
+}
+
+div#humanVsComputerPopupMessage div.playerNameContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 55vmin;
+  height: 15vmin;
+  font-size: 5vmin;
+  text-align: center;
+  gap: 2vmin;
+}
+div#humanVsComputerPopupMessage div.playerNameContainer h2 {
+  font-size: 6vmin;
+  text-align: center;
+}
+div#humanVsComputerPopupMessage div.playerNameContainer .playerNameInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vmin;
+}
+div#humanVsComputerPopupMessage div.playerNameContainer .playerNameInput input {
+  width: 55vmin;
+  height: 5vmin;
+  font-size: 3vmin;
+  text-align: start;
+  text-align: center;
+  border: 1px solid;
+}
+div#humanVsComputerPopupMessage button {
+  width: 55vmin;
+  height: 15vmin;
+}
+
+div#gameoverPopupMessage div.popupContainer h2 {
+  font-size: 10vmin;
+  text-align: center;
+}
+div#gameoverPopupMessage div.popupContainer div.popupButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3vmin;
+}
+div#gameoverPopupMessage div.popupContainer div.popupButtons button {
+  width: 30vmin;
+  height: 15vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 #startGameSection > * {

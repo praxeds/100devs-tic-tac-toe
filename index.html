@@ -23,20 +23,36 @@
         </div>
     </nav>
 
-    <div id="humanVsHumanPopupMessage" class="popup" >
+    <div id="humanVsHumanPopupMessage" class="popup noDisplay" >
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText playerNameContainer">
                 <div class="playerNameInput">
-                    <h3>Player 1 name</h3>
+                    <h2>Player 1 name</h2>
                     <input type="text" placeholder="Player 1">
                 </div>
                 <div class="playerNameInput">
-                    <h3>Player 2 name</h3>
+                    <h2>Player 2 name</h2>
                     <input type="text" placeholder="Player 2">
                 </div>
             </div>
             <div class="popupButtons">
-                <button class="darkBackground pointer lightText largeButton">Start Game</button>
+                <button class="darkBackground pointer lightText">Start Game</button>
+            </div>
+        </div>
+        <div class="popupShadow darkBackground">
+        </div>
+    </div>
+
+    <div id="humanVsComputerPopupMessage" class="popup noDisplay" >
+        <div class="popupContainer lightBackground darkBorder roboto">
+            <div class="darkText playerNameContainer">
+                <div class="playerNameInput">
+                    <h2>Player name</h2>
+                    <input type="text" placeholder="Player">
+                </div>
+            </div>
+            <div class="popupButtons">
+                <button class="darkBackground pointer lightText">Start Game</button>
             </div>
         </div>
         <div class="popupShadow darkBackground">
@@ -47,7 +63,7 @@
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText">
                 <!--! Needs to use js to add text to this h2 according to the winner's name. e.g: Player 1<br>wins! -->
-                <h2></h2>
+                <h2>Player 1<br>wins!</h2>
             </div>
             <div class="popupButtons">
                 <button class="darkBackground pointer lightText">Play again</button>
