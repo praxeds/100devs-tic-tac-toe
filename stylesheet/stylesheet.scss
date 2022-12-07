@@ -144,6 +144,47 @@ nav {
     }
 }
 
+
+
+
+
+//!Popup messages
+div.popup {
+    .popupContainer {
+        @include size(70vmin, 55vmin);
+        @include absolutePositioning();
+        z-index: 10;
+        border: 4px solid;
+        @include flex(column, center, center);
+        gap: 5vmin;
+
+        h2 {
+            @include text(10vmin, center);
+            margin: 0;
+        }
+
+        div.popupButtons {
+            @include flex(row, center, center);
+            gap: 3vmin;
+
+            button {
+                @include resetButton();
+                @include size(30vmin, 15vmin);
+                @include flex(row, center, center);
+                gap: 2rem;
+            }
+        }
+    }
+    .popupShadow {
+        @include size(70vmin, 55vmin);
+        @include absolutePositioning($translateX: -45%, $translateY: -43%);
+        z-index: 5;
+    }
+}
+
+
+
+
 //!Start Section
 #startGameSection>* {
     margin: 10vmin auto !important;

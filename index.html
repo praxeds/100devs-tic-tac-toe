@@ -23,9 +23,24 @@
         </div>
     </nav>
 
+    <div id="gameoverPopupMessage" class="popup noDisplay" >
+        <div class="popupContainer lightBackground darkBorder roboto">
+            <div class="darkText">
+                <!--! Needs to use js to add text to this h2 according to the winner's name. e.g: Player 1<br>wins! -->
+                <h2></h2>
+            </div>
+            <div class="popupButtons">
+                <button class="darkBackground pointer lightText">Play again</button>
+                <button class="darkBackground pointer lightText">Back to menu</button>
+            </div>
+        </div>
+        <div class="popupShadow darkBackground">
+        </div>
+    </div>
+
     <main>
         <!--Section that user sees as soon as loading the page-->
-        <section id="startGameSection" class="">
+        <section id="startGameSection" class="noDisplay">
             <div id="title">
                 <span class="darkText neothic">T</span>
                 <span class="darkText neothic">I</span>
@@ -55,7 +70,7 @@
             Once user clicks on either button from #startGameSection (.startBtn),
             we would use javascript to toggle the class .noDisplay to make #startGameSection disappear
             and make this section show up!-->
-        <section id="gameplaySection" class="noDisplay">
+        <section id="gameplaySection" class="">
             <div id="scoreboardContainer" class="darkText">
                 <div id="playerOneContainer" class="playerContainer">
                     <ion-icon name="arrow-down"></ion-icon>
@@ -66,6 +81,7 @@
                     <p>VS</p>
                 </div>
                 <div id="playerTwoContainer" class="playerContainer">
+                    <!--!Once it's player 2's turn, this ion-icon needs to have the class 'noDisplay' toggled so it appears on screen and vice-versa!!-->
                     <ion-icon name="arrow-down noDisplay"></ion-icon>
                     <h2 class="neothic">O</h2>
                     <p class="roboto">Player 2</p>
