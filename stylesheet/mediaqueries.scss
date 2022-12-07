@@ -24,6 +24,25 @@
             gap: 2rem;
         }
     }
+
+    //!Gameplay Section
+    #gameplaySection {
+        gap: 3rem;
+        #scoreboardContainer {
+            .neothic {
+                @include text(15vmin);
+            }
+    
+            .roboto {
+                @include text(3vmin);
+                font-weight: 300;
+            }
+        }
+    
+        div#gameboard {
+            @include size(78vmin, 78vmin);
+        }
+    }    
 }
 
 // Large devices (desktops, less than 1200px)
@@ -76,4 +95,35 @@
             }
         }
     }
+
+    //!Gameplay Section
+    #gameplaySection {
+        gap: 3rem;
+        #scoreboardContainer {
+            .neothic {
+                @include text(10vmin);
+            }
+    
+            .roboto {
+                @include text(2vmin);
+            }
+
+            .playerContainer {
+                @keyframes whoseTurnAnimation {
+                    0% {
+                        transform: translateY(-180%);
+                    }
+    
+                    100% {
+                        transform: translateY(-200%);
+                    }
+    
+                }
+            }
+        }
+    
+        div#gameboard {
+            @include size(65vmin, 65vmin);
+        }
+    } 
 }
