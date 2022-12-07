@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+  div.popup button {
+    font-size: 4vmin;
+  }
   #startGameSection > * {
     margin: 7vmin auto !important;
   }
