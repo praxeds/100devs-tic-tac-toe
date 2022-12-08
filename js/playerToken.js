@@ -20,9 +20,9 @@ class Token {
     renderHTMLToken() {
         let tokenPath = "";
         if (this.owner.id === "player1") {
-            tokenPath = '../img/o.svg';
+            tokenPath = '../img/o.svg'; // this is where we upload our icons or assets for O piece
         } else {
-            tokenPath = '../img/x.svg';
+            tokenPath = '../img/x.svg'; // this is where we upload our icons or assets for the X piece
         }
         const tokenId = this.id;
         return [tokenPath, tokenId];
