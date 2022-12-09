@@ -58,7 +58,8 @@ darkModeToggleBtn.addEventListener('click', () => {
 
 const vsComputerButton = document.querySelector('#vs-computer');
 const vsFriendButton = document.querySelector('#vs-friend');
-const startButton = document.querySelector('#start-button');
+const vsCompStartButton = document.querySelector('#vsComp-start-button');
+const vsHumanStartButton = document.querySelector('#vsHuman-start-button');
 const vsCompPopup = document.querySelector('#humanVsComputerPopupMessage');
 const vsFriendPopup = document.querySelector('#humanVsHumanPopupMessage');
 const startGameSection = document.getElementById('startGameSection');
@@ -66,7 +67,6 @@ const board = document.getElementById('gameplaySection');
 let vsComputer;
 let game;
 
-startButton.style.display = 'none';
 vsCompPopup.style.display = 'none';
 vsFriendPopup.style.display = 'none';
 board.style.display = 'none';
@@ -85,7 +85,7 @@ vsFriendButton.addEventListener('click', () => {
   vsComputer = false
 })
 
-startButton.addEventListener('click', () => {
+vsCompStartButton.addEventListener('click', () => {
   startGameSection.style.display = 'none';
   vsFriendPopup.style.display = 'none';
   vsCompPopup.style.display = 'none';
@@ -94,6 +94,14 @@ startButton.addEventListener('click', () => {
   game.startGame(); //function in gameLogic.js
 })
 
+vsHumanStartButton.addEventListener('click', () => {
+  startGameSection.style.display = 'none';
+  vsFriendPopup.style.display = 'none';
+  vsCompPopup.style.display = 'none';
+  board.style.display = 'block';
+  handleGameInitClass()
+  game.startGame(); //function in gameLogic.js
+})
 
 
 //! Functions /////////////////////////////////////////////////////
@@ -137,5 +145,6 @@ function hideVsComputerPopup(){
  function showStartActions(){
   vsCompPopup.style.display = 'block';
   vsFriendPopup.style.display = 'block';
-  startButton.style.display = 'inline-block';
+  vsCompStartButton.style.display = 'inline-block';
+  vsHumanStartButton.style.display = 'inline-block';
 }
