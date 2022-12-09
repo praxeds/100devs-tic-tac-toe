@@ -59,22 +59,40 @@ darkModeToggleBtn.addEventListener('click', () => {
 const vsComputerButton = document.querySelector('#vs-computer');
 const vsFriendButton = document.querySelector('#vs-friend');
 const startButton = document.querySelector('#start-button');
-const playerNames = document.querySelector('.player-names')
+const vsCompPopup = document.querySelector('#humanVsComputerPopupMessage');
+const vsFriendPopup = document.querySelector('#humanVsHumanPopupMessage');
+const startGameSection = document.getElementById('startGameSection');
+const board = document.getElementById('gameplaySection');
+let vsComputer;
+let game;
+
+startButton.style.display = 'none';
+vsCompPopup.style.display = 'none';
+vsFriendPopup.style.display = 'none';
+board.style.display = 'none';
 
 vsComputerButton.addEventListener('click', () => {
-  hideVsButtons()
-  document.querySelector('#player-2-name').style.display = 'none'
-  document.querySelector('label[for="player-2-name"]').style.display = 'none'
+  //hideVsButtons()
   showStartActions()
+  hideVsFriendPopup()
   vsComputer = true
 })
 
 vsFriendButton.addEventListener('click', () => {
-  hideVsButtons()
+  //hideVsButtons()
   showStartActions()
+  hideVsComputerPopup()
   vsComputer = false
 })
 
+startButton.addEventListener('click', () => {
+  startGameSection.style.display = 'none';
+  vsFriendPopup.style.display = 'none';
+  vsCompPopup.style.display = 'none';
+  board.style.display = 'block';
+  handleGameInitClass()
+  game.startGame(); //function in gameLogic.js
+})
 
 
 
@@ -82,19 +100,42 @@ vsFriendButton.addEventListener('click', () => {
 const toggleClass = (element, className) => {
     element.classList.toggle(className)
 }
+/**
+ * Initiates instance of the game. it passes a boolean to the game constructor
+ * to determine if the player chose to play vs the computer or vs a human
+ */
+ function handleGameInitClass(){
+  if(vsComputer){
+    game = new Game(vsComputer)
+  } else {
+    gmae = new Game()
+  
+  }
+}
 
 /**
- * Hides the "Play vs Computer" and "Play vs Friend" Buttons
+ * Hides the "Play vs Computer" and "Play vs Friend" Buttons when clicked
+ * Also hides the opposite popup from the other
  */
 function hideVsButtons(){
-  vsComputerButton.style.display = 'none';
   vsFriendButton.style.display = 'none';
+  vsComputerButton.style.display = 'none';
 }
+
+function hideVsFriendPopup(){
+  vsFriendPopup.style.display = 'none';
+}
+
+function hideVsComputerPopup(){
+  vsCompPopup.style.display = 'none';
+}
+
 
 /**
  * Displays the player name input fields and the start game button
  */
  function showStartActions(){
-  playerNames.style.display = 'block';
+  vsCompPopup.style.display = 'block';
+  vsFriendPopup.style.display = 'block';
   startButton.style.display = 'inline-block';
 }
