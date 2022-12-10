@@ -50,7 +50,115 @@ darkModeToggleBtn.addEventListener('click', () => {
     toggleClass(moonIcon, 'noDisplay')
 })
 
+
+/**
+ * 
+ * Connecting to the DOM
+ */
+const vsComputerButton = document.querySelector('#vs-computer');
+const vsFriendButton = document.querySelector('#vs-friend');
+const vsCompStartButton = document.querySelector('#vsComp-start-button');
+const vsHumanStartButton = document.querySelector('#vsHuman-start-button');
+const vsCompPopup = document.querySelector('#humanVsComputerPopupMessage');
+const vsFriendPopup = document.querySelector('#humanVsHumanPopupMessage');
+const startGameSection = document.getElementById('startGameSection');
+const board = document.getElementById('gameplaySection');
+const boardCells = document.getElementById('gameboard');
+const gameOver = document.getElementById('gameoverPopupMessage');
+let vsComputer;
+let game;
+
+vsCompPopup.style.display = 'none';
+vsFriendPopup.style.display = 'none';
+board.style.display = 'none';
+gameOver.style.display = 'none';
+
+vsComputerButton.addEventListener('click', () => {
+  //hideVsButtons()
+  showStartActions()
+  hideVsFriendPopup()
+  vsComputer = true
+})
+
+vsFriendButton.addEventListener('click', () => {
+  //hideVsButtons()
+  showStartActions()
+  hideVsComputerPopup()
+  vsComputer = false
+})
+
+vsCompStartButton.addEventListener('click', () => {
+  startGameSection.style.display = 'none';
+  vsFriendPopup.style.display = 'none';
+  vsCompPopup.style.display = 'none';
+  board.style.display = 'block';
+  handleGameInitClass()
+  game.startGame(); //function in gameLogic.js
+})
+
+vsHumanStartButton.addEventListener('click', () => {
+  startGameSection.style.display = 'none';
+  vsFriendPopup.style.display = 'none';
+  vsCompPopup.style.display = 'none';
+  board.style.display = 'block';
+  handleGameInitClass()
+  game.startGame(); //function in gameLogic.js
+})
+
+boardCells.addEventListener("click", (event) => {
+  game.handleClick(event);
+});
+
+boardCells.addEventListener("mouseover", (event) => {
+  game.handleMouseOver(event);
+});
+
+boardCells.addEventListener("mouseout", (event) => {
+  game.handleMouseOut(event);
+});
+
+
 //! Functions /////////////////////////////////////////////////////
 const toggleClass = (element, className) => {
     element.classList.toggle(className)
+}
+/**
+ * Initiates instance of the game. it passes a boolean to the game constructor
+ * to determine if the player chose to play vs the computer or vs a human
+ */
+ function handleGameInitClass(){
+  if(vsComputer){
+    game = new Game(vsComputer)
+  } else {
+    gmae = new Game()
+  
+  }
+}
+
+/**
+ * Hides the "Play vs Computer" and "Play vs Friend" Buttons when clicked
+ * Also hides the opposite popup from the other
+ */
+function hideVsButtons(){
+  vsFriendButton.style.display = 'none';
+  vsComputerButton.style.display = 'none';
+}
+
+function hideVsFriendPopup(){
+  vsFriendPopup.style.display = 'none';
+}
+
+function hideVsComputerPopup(){
+  vsCompPopup.style.display = 'none';
+}
+
+
+/**
+ * Displays the player name input fields and the start game button
+ */
+ function showStartActions(){
+  vsCompPopup.style.display = 'block';
+  vsFriendPopup.style.display = 'block';
+  vsCompStartButton.style.display = 'inline-block';
+  vsHumanStartButton.style.display = 'inline-block';
 }
