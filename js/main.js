@@ -55,7 +55,6 @@ darkModeToggleBtn.addEventListener('click', () => {
  * 
  * Connecting to the DOM
  */
-
 const vsComputerButton = document.querySelector('#vs-computer');
 const vsFriendButton = document.querySelector('#vs-friend');
 const vsCompStartButton = document.querySelector('#vsComp-start-button');
@@ -64,7 +63,7 @@ const vsCompPopup = document.querySelector('#humanVsComputerPopupMessage');
 const vsFriendPopup = document.querySelector('#humanVsHumanPopupMessage');
 const startGameSection = document.getElementById('startGameSection');
 const board = document.getElementById('gameplaySection');
-const boardCell = document.getElementById('gameboard');
+const boardCells = document.getElementById('gameboard');
 let vsComputer;
 let game;
 
@@ -103,6 +102,18 @@ vsHumanStartButton.addEventListener('click', () => {
   handleGameInitClass()
   game.startGame(); //function in gameLogic.js
 })
+
+boardCells.addEventListener("click", (event) => {
+  game.handleClick(event);
+});
+
+boardCells.addEventListener("mouseover", (event) => {
+  game.handleMouseOver(event);
+});
+
+boardCells.addEventListener("mouseout", (event) => {
+  game.handleMouseOut(event);
+});
 
 
 //! Functions /////////////////////////////////////////////////////
