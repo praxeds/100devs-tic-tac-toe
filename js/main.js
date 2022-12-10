@@ -64,12 +64,14 @@ const vsFriendPopup = document.querySelector('#humanVsHumanPopupMessage');
 const startGameSection = document.getElementById('startGameSection');
 const board = document.getElementById('gameplaySection');
 const boardCells = document.getElementById('gameboard');
+const gameOver = document.getElementById('gameoverPopupMessage');
 let vsComputer;
 let game;
 
 vsCompPopup.style.display = 'none';
 vsFriendPopup.style.display = 'none';
 board.style.display = 'none';
+gameOver.style.display = 'none';
 
 vsComputerButton.addEventListener('click', () => {
   //hideVsButtons()
