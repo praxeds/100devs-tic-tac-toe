@@ -1,4 +1,4 @@
-// taeho
+// baddie
 
 class Token {
     constructor (owner, index) {

@@ -1,4 +1,4 @@
-// taeho
+// baddie
 
 class Player {
     constructor(name, id, color, active = fales) {
