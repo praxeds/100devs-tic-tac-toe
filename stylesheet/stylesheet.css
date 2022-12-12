@@ -318,7 +318,7 @@ div#gameoverPopupMessage div.popupContainer div.popupButtons button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 5rem !important;
 }
 #gameplaySection #scoreboardContainer {
   display: flex;

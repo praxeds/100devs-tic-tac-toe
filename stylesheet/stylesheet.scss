@@ -289,7 +289,7 @@ div#gameoverPopupMessage {
 //!Gameplay Section
 #gameplaySection {
     @include flex(column, center, center);
-    gap: 5rem;
+    gap: 5rem !important;
 
     #scoreboardContainer {
         @include flex(row, center, center);

@@ -12,7 +12,7 @@
 
 <body class="lightBackground">
     <nav>
-        <div id="backBtn" class="darkText transparent pointer">
+        <div id="backBtn" class="darkText transparent pointer noHighlights">
             <ion-icon name="arrow-back-circle"></ion-icon>
         </div>
         <div id="darkModeToggle" class="pointer darkBorder noHighlights">
@@ -23,7 +23,7 @@
         </div>
     </nav>
 
-    <div id="humanVsHumanPopupMessage" class="popup" >
+    <div id="humanVsHumanPopupMessage" class="popup noDisplay" >
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText playerNameContainer">
                 <div class="playerNameInput">
@@ -36,14 +36,14 @@
                 </div>
             </div>
             <div class="popupButtons">
-                <button id="vsHuman-start-button" class="darkBackground pointer lightText">Start Game</button>
+                <button class="darkBackground pointer lightText">Start Game</button>
             </div>
         </div>
         <div class="popupShadow darkBackground">
         </div>
     </div>
 
-    <div id="humanVsComputerPopupMessage" class="popup" >
+    <div id="humanVsComputerPopupMessage" class="popup noDisplay" >
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText playerNameContainer">
                 <div class="playerNameInput">
@@ -52,14 +52,14 @@
                 </div>
             </div>
             <div class="popupButtons">
-              <button id="vsComp-start-button" class="darkBackground pointer lightText">Start Game</button>
+              <button class="darkBackground pointer lightText">Start Game</button>
             </div>
         </div>
         <div class="popupShadow darkBackground">
         </div>
     </div>
 
-    <div id="gameoverPopupMessage" class="popup" >
+    <div id="gameoverPopupMessage" class="popup noDisplay" >
         <div class="popupContainer lightBackground darkBorder roboto">
             <div class="darkText">
                 <!--! Needs to use js to add text to this h2 according to the winner's name. e.g: Player 1<br>wins! -->
@@ -89,12 +89,12 @@
                 <span class="darkText neothic">E</span>
             </div>
             <div id="startBtnsDiv">
-                <button class="startBtn darkBackground pointer" id="vs-computer">
+                <button class="startBtn darkBackground pointer" id="vsComputer">
                     <ion-icon name="person-outline" class="lightText"></ion-icon>
                     <p class="roboto lightText">VS</p>
                     <ion-icon name="desktop-outline" class="lightText"></ion-icon>
                 </button>
-                <button class="startBtn darkBackground pointer" id="vs-friend">
+                <button class="startBtn darkBackground pointer" id="vsHuman">
                     <ion-icon name="person-outline" class="lightText"></ion-icon>
                     <p class="roboto lightText">VS</p>
                     <ion-icon name="person-outline" class="lightText"></ion-icon>
@@ -106,7 +106,7 @@
             Once user clicks on either button from #startGameSection (.startBtn),
             we would use javascript to toggle the class .noDisplay to make #startGameSection disappear
             and make this section show up!-->
-        <section id="gameplaySection" class="">
+        <section id="gameplaySection" class="noDisplay">
             <div id="scoreboardContainer" class="darkText">
                 <div id="playerOneContainer" class="playerContainer">
                     <ion-icon name="arrow-down"></ion-icon>
